@@ -1,8 +1,9 @@
 import s from "./Contact.module.css";
 import { MdPerson } from "react-icons/md";
 import { BsFillTelephoneOutboundFill } from "react-icons/bs";
+import { FaPen } from "react-icons/fa";
 
-const Contact = ({ item, handleDelete }) => {
+const Contact = ({ item, handleDelete, edit }) => {
   return (
     <li className={s.item}>
       <div>
@@ -15,6 +16,10 @@ const Contact = ({ item, handleDelete }) => {
           {item.number}
         </p>
       </div>
+      <button className={s.button} onClick={edit}>
+        <FaPen />
+        Edit
+      </button>
       <button onClick={() => handleDelete(item.id)} className={s.button}>
         Delete
       </button>

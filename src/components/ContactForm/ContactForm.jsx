@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import s from "./ContactForm.module.css";
 import * as Yup from "yup";
 import { useCallback } from "react";
-import { addContact } from "../../redux/contactsOps";
+import { addContact } from "../../redux/contacts/operations";
 
 const PatternonlyLetters = /^[A-Za-zА-Яа-яЄєІіЇїҐґ-\s]+$/;
 const PatternPhone = /^(\d{3}-\d{2}-\d{2}|\d{7})$/;
@@ -14,8 +14,8 @@ const ContactSchema = Yup.object().shape({
     .required("This field is required")
     .matches(PatternonlyLetters, "Enter only letters"),
   number: Yup.string()
-    .length(9, "Format xxx-xx-xx") // Ensure correct length
-    .matches(PatternPhone, "Format xxx-xx-xx") // Ensure correct format
+    .length(9, "Format xxx-xx-xx")
+    .matches(PatternPhone, "Format xxx-xx-xx")
     .required("Enter a number"),
 });
 
