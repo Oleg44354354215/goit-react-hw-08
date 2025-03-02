@@ -1,0 +1,54 @@
+.text {
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 5px; /* Добавлен отступ */
+}
+
+.nimber {
+  font-size: 14px;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 5px; /* Добавлен отступ */
+}
+button {
+  background-color: #ecefe8;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  padding: 8px 12px; /* Уменьшены внутренние отступы */
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e0e0e0;
+  border-color: #bbb; /* Легкий эффект на наведение */
+}
+.item {
+  display: flex;
+  background-color: rgb(197, 218, 241);
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  gap: 15px;
+  border: 1px solid rgb(40, 81, 134);
+}
+
+.item > div {
+  flex-grow: 1;
+  border-right: 1px solid #142d51; /* Разделительная линия */
+  padding-right: 15px; /* Отступ текста от разделителя */
+}
+.item:hover {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Усиление тени */
+  transform: scale(1.02); /* Легкое увеличение */
+  transition: all 0.2s ease-in-out;
+}
